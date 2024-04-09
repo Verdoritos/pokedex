@@ -1,0 +1,306 @@
+button {
+  padding: 0;
+  margin: 0 auto;
+  font-size: 30px;
+  background-color: #333;
+  /* color: #fff; */
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+
+}
+
+button:hover {
+  background-color: #111;
+}
+
+body {
+  background: url("./pokemon-bg.jpg") no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  font-family: Arial, Helvetica, sans-serif;
+  margin: 0%;
+}
+
+#container {    
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* CSS para tela pequena (até 1000px de largura) */
+@media only screen and (max-width: 1000px) {
+  nav {
+    display: flex; /* Exibir a navegação como um flex container */
+    justify-content: center; /* Distribuir os itens horizontalmente com espaçamento igual */
+    align-items: center; /* Centralizar verticalmente */
+  }
+
+  .menu-list {
+    display: none; /* Inicialmente, a lista de navegação está oculta */
+    width: 100%; /* Definir a largura da lista de navegação para 100% da largura da navegação */
+    max-width: 100%; /* Limitar a largura máxima da lista de navegação à largura da navegação */
+    box-sizing: border-box; /* Incluir a largura do padding e da borda na largura total */
+    padding: 0; /* Remover o padding interno */
+    margin: 0; /* Remover margens */
+  }
+
+  /* Estilo do menu de hambúrguer */
+  .menu-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    width: 100%; /* Defina explicitamente a largura do ícone */
+    height: 70px; /* Defina explicitamente a altura do ícone */
+    font-size: 160%;
+  }
+
+  /* Estilo do menu de hambúrguer quando ativado */
+  .menu-list.active {
+    display: block; /* Exibir a lista de navegação quando a classe active for aplicada */
+  }
+
+  /* Estilos adicionais para a lista de navegação */
+  .menu-list li {
+    text-align: center;
+  }
+
+  .menu-list li a {
+    padding: 10px;
+    display: block;
+    color: white;
+    text-decoration: none;
+  }
+}
+
+/* CSS para telas maiores */
+@media only screen and (min-width: 1001px) {
+  .menu-icon {
+    display: none; /* Ocultar o ícone do menu */
+  }
+}
+
+nav {
+  background-color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+nav div{
+  height: 100%; 
+  width: 100%;
+}
+
+.imgnav{
+  height: 50px;
+}
+
+a:not(.ignoreCSS) {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 50px;
+  text-decoration: none;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  align-self: center;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding-left: 16vh;
+  padding-right: 16vh;
+  text-decoration: none;
+}
+
+li a:hover {
+  background-color: #111;
+}
+
+.card {
+  width: 300px; /* Largura do card */
+  background-image: url(./pokeball.jpg);
+  background-size: cover; /* Garante que a imagem cubra todo o card */
+  background-position: center; /* Centraliza a imagem */
+  background-repeat: no-repeat; /* Evita repetição da imagem */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Sombra do card */
+  overflow: hidden;
+  margin: 6px; /* Margem ao redor do card */    
+  border: 3px solid black;
+  transition: transform 0.1s ease-in-out; /* suaviza a transição */
+
+}
+
+.card:hover{
+  transform: scale(1.05);
+}
+
+ 
+.card-img {
+  width: 100%; /* Garante que a imagem preencha toda a largura do card */
+
+}
+
+.card-content {
+  padding: 20px; /* Espaçamento interno do conteúdo do card */
+  margin-top: 155px;
+  color: black;
+}
+
+.card-content h3 {
+  margin-top: 0;
+}
+
+.card-content p {
+  margin-bottom: 10px;
+}
+
+.card-content a {
+  display: inline-block;
+  background-color: #007bff;
+  color: #fff;
+  padding: 8px 16px;
+  border-radius: 4px;
+  text-decoration: none;
+}
+
+.divImg{
+  width: 150px;
+  margin-left: 75px;
+  margin-top: 25px;
+  background-color: #fff;
+  border-radius: 10px;
+  border: 3px solid black;
+}
+
+.tipo {
+  padding: 5px;
+  margin-bottom: 5px;
+  font-weight: bold;
+  display: inline-block; /* Torna a div do tipo inline-block */
+  margin-left: 3px;
+}
+
+/* Definindo as cores para cada tipo */
+.water {
+  background-color: rgb(40, 146, 182); 
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+.grass {
+  background-color: rgb(6, 112, 30);
+  border-radius: 5px;
+  border: 3px solid black;
+  color: #fff;
+}
+
+.poison {
+  background-color: rgb(103, 6, 108); 
+  border-radius: 5px;
+  border: 3px solid black;
+  color: #fff;
+}
+
+.bug {
+  background-color: rgb(16, 191, 10); 
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+.flying {
+  background: linear-gradient(to bottom, rgb(52, 16, 212), rgb(182, 177, 177));
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+.fire {
+  background-color: orangered; 
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+.normal {
+  background-color: rgb(150, 160, 150); 
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+.ground {
+  background: linear-gradient(to bottom, rgb(212, 209, 16), rgb(99, 94, 8));
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+.electric {
+  background-color: rgb(234, 255, 5); 
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+.fairy {
+  background-color: rgb(244, 91, 213); 
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+.fighting {
+  background-color: rgb(251, 3, 3); 
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+.psychic {
+  background-color: rgb(191, 40, 148); 
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+.rock {
+  background-color: rgb(93, 65, 16); 
+  border-radius: 5px;
+  border: 3px solid black;
+  color: #fff;
+}
+
+.ice {
+  background-color: rgb(79, 255, 243); 
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+.ghost {
+  background-color: rgb(58, 11, 87); 
+  border-radius: 5px;
+  border: 3px solid black;
+  color: #fff;
+}
+
+.dragon {
+  background: linear-gradient(to bottom, rgb(26, 16, 212), rgb(232, 75, 19));
+  border-radius: 5px;
+  border: 3px solid black;
+}
+
+.cartas{
+  margin: 10px;
+}
+
+.cartas:hover{
+  transform: scale(1.05);
+}
